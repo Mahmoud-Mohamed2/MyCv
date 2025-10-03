@@ -308,8 +308,8 @@ background-color: var(--main-background-black);
     justify-content: space-between;
 }
 .home .imag{
-width: 400px;
-height: 300px;
+width: 600px;
+height: 400px;
 }
 
 .home .imag img{
@@ -410,7 +410,30 @@ font-size: 50px;
         height: 100px;
         }
 }
-
+.top{
+    position: fixed;
+    background-color: var(--main-background-blue);
+    color: var(--main-background-white);
+    width: 25px;
+    bottom: 10px;
+    right: 10px;
+    text-align: center;
+    z-index: 111;
+    font-size: 20px;
+    animation: tops 5s linear 1s  infinite ;
+}
+.top:hover{
+    background-color: #080808;
+    color: var(--main-background-blue);
+}
+@keyframes tops{
+    0%, 10% ,20%, 50%, 80%, 100%{
+        transform: translateY(0);
+    }
+    40%, 60%{
+        transform: translateY(-15px);
+    }
+}
 .about{
 padding-top: var(--main-padding-top);
 padding-bottom: var(--main-padding-bottom);
@@ -423,23 +446,30 @@ background-color: var(--main-background-black);
 display: flex;
 justify-content: space-between;
 align-items: center;
-padding: 40px;
+padding: 20px;
 box-shadow: 0px 0px 18px 0px #eee;
 
 }
 
-.about .imag{
-width: 350px;
-transition: var(--transition);
-box-shadow: 19px 20px 5px 2px white;
-animation-duration: 2s;
+
+.about .textt{
+    color: white; 
+    animation-duration: 1s;
+    animation-delay: 1s;
+    
 }
-.about .container:hover .imag{
-    box-shadow:-20px -20px 5px 2px var(--main-background-blue);
+.about .textt p{
+    line-height: 2;
+    margin-left: 150px;
+    font-size: 20px;
+    /* font-family: none; */
 }
-.about .imag img{
-    max-width: 100%;
+
+.about .textt p span{
+    color: var(--main-background-blue);
+    font-size: 25px;
 }
+
 .about .text{
     color: white; 
     animation-duration: 1s;
@@ -448,7 +478,7 @@ animation-duration: 2s;
 }
 .about .text p{
     line-height: 2;
-    margin-left: 170px;
+    margin-right: 160px;
     font-size: 20px;
     /* font-family: none; */
 }
@@ -475,163 +505,7 @@ animation-duration: 2s;
     width: 200px;
     }
 }
-.about .icon a {
-    display: flex;
-    font-size: 25px;
-    position: relative;
-    padding: 10px;
-    margin-bottom: 20px;
-    margin-left: 10px;
-    width: 50px;
-    height: 50px;
-    align-items: center;
-    border-radius: 10px;
-    justify-content: center;
-    background-color: #080808;
-    box-shadow: var(--main-background-white) 0px 0px 4px 0px, var(--main-background-white) 0px 0px 2px 0px;
-    color: white;
-    transition: var(--transition);
-    animation-duration: 3s;
-    animation-delay: 1.5s;
-    
-}
-.about .icon a:nth-of-type(1){
-    animation-delay: 0.25s;
-}
-.about .icon a:nth-of-type(2){
-    animation-delay: 0.50s;
-}
-.about .icon a:nth-of-type(3){
-    animation-delay: .75s;
-}
-.about .icon a:nth-of-type(4){
-    animation-delay: 0.95s;
-}
-.about .icon a:nth-of-type(5){
-    animation-delay: 1.15s;
-}
-.about .icon a:nth-of-type(6){
-    animation-delay: 1.25s;
-}
-.about .icon a:hover {
-    border-radius: 0px 10px 10px 0px;
-    
-}
-/* @media (max-width:768px) {
-    .about .icon a {
-    display: inline-block;
-    
-    }
-} */
-.about .icon a.GitHub p{
-    position: absolute;   
-    opacity: 0;
-    color: black;
-    background-color: white;
-    padding: 10px;
-    transition:var(--transition);
-    border-radius: 10px;
-    left: -106px;
-}
-.about .icon a:hover.GitHub p{
-    opacity: 1;
-    border-radius: 10px 0px 0px 10px;
-    box-shadow: var(--main-background-white) 0px 0px 3px 0px, var(--main-background-white) 0px 0px 1px 0px;}
-.about .icon a.facebook p{
-    position: absolute;   
-    opacity: 0;
-    background-color: #0084ff;
-    color: white;
-    padding: 10px;
-    transition:var(--transition);
-    border-radius: 10px;
-    left: -139px;
-}
-.about .icon a:hover.facebook p{
-    opacity: 1;
-    border-radius: 10px 0px 0px 10px;
-    box-shadow: var(--main-background-white) 0px 0px 3px 0px, var(--main-background-white) 0px 0px 1px 0px;}
-.about .icon a.Whats p{
-    position: absolute;   
-    opacity: 0;
-    background-color: #25d366;
-    color: white;
-    padding: 10px;
-    transition:var(--transition);
-    border-radius: 10px;
-    left: -102px;
-}
-.about .icon a:hover.Whats p{
-    opacity: 1;
-    border-radius: 10px 0px 0px 10px;
-    box-shadow: var(--main-background-white) 0px 0px 3px 0px, var(--main-background-white) 0px 0px 1px 0px;}
-.about .icon a.Messenger p{
-    position: absolute;   
-    opacity: 0;
-    background-color: #0084ff;
-    color: white;
-    padding: 10px;
-    transition:var(--transition);
-    border-radius: 10px;
-    left: -157px;
-}
-.about .icon a:hover.Messenger p{
-    opacity: 1;
-    border-radius: 10px 0px 0px 10px;
-    box-shadow: var(--main-background-white) 0px 0px 3px 0px, var(--main-background-white) 0px 0px 1px 0px;}
-.about .icon a.linked p{
-    position: absolute;   
-    opacity: 0;
-    background-color: #0084ff;
-    color: white;
-    padding: 10px;
-    transition:var(--transition);
-    border-radius: 10px;
-    left: -144px;
-}
-.about .icon a:hover.linked p{
-    opacity: 1;
-    border-radius: 10px 0px 0px 10px;
-    box-shadow: var(--main-background-white) 0px 0px 3px 0px, var(--main-background-white) 0px 0px 1px 0px;}
-.about .icon a.gmail p{
-    position: absolute;   
-    opacity: 0;
-    background-color: #0084ff;
-    color: white;
-    padding: 10px;
-    transition:var(--transition);
-    border-radius: 10px;
-    left: -93px;
-}
-.about .icon a:hover.gmail p{
-    opacity: 1;
-    border-radius: 10px 0px 0px 10px;
-    box-shadow: var(--main-background-white) 0px 0px 3px 0px, var(--main-background-white) 0px 0px 1px 0px;}
 
-.about .icon a:hover.GitHub{
-    background-color: var(--main-background-white);
-    color: black;
-}
-.about .icon a:hover.facebook{
-    background-color: #0084ff;
-    color: white;
-}
-.about .icon a:hover.Whats{
-    background-color: #25d366;
-    color: white;
-}
-.about .icon a:hover.Messenger{
-    background-color: #0084ff;
-    color: white;
-}
-.about .icon a:hover.linked{
-    background-color: #0077b5;
-    color: white;
-}
-.about .icon a:hover.gmail{
-    background-color: #4285F4;
-    color:white;
-}
 
 .service{
     
@@ -639,14 +513,7 @@ animation-duration: 2s;
     background-color: var(--main-background-white);
     position: relative;
 }
-.service .container{
-    
-color: white;
-display: grid;
-grid-template-columns: repeat(auto-fill , minmax(400px , 1fr));
-gap: 100px;
-padding: 25px;
-}
+
 @media (max-width:988px) {
     .service .container{
         grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
@@ -717,123 +584,110 @@ animation-delay: .5s;
     }
 } 
 
+.ourskills{
+  padding-bottom: var(--main-padding-bottom);
+  background-color: var(--main-background-white);
+  position: relative;
+}
+.ourskills .container{
+  display: grid;
+  grid-template-columns: repeat(auto-fill , minmax(400px , 1fr));
+  gap: 100px;
+  padding: 25px;
+  animation-duration: 3s;
+}
+@media (max-width:988px) {
+  .ourskills .container{
+      grid-template-columns: repeat(auto-fill , minmax(300px , 1fr));
+
+  }
+}
 .ourskills h1{
-    text-align: center;
-    font-size: 40px;
-    background-color: var(--main-background-white);
-    width: fit-content;
-    padding: 10px;
-    margin: 10px auto;
+  text-align: center;
+  font-size: 40px;
+  background-color: var(--main-background-white);
+  width: fit-content;
+  padding: 10px;
+  margin: 10px auto;
 }
 .ourskills .Application{
-    background-color: black;
-    padding: 20px;
-    box-shadow: 0px 0px 4px 0px black;
-    transition: var(--transition);
-    position: relative;
+  background-color: black;
+  padding: 20px;
+  box-shadow: 0px 0px 4px 0px black;
+  transition: var(--transition);
 }
 .ourskills .Application:hover{
-    transform: translateY(-15px);
+  transform: translateY(-15px);
 }
-.ourskills .Application  h3{
-        display: flex;
-        justify-content: space-between;
-        color: var(--main-background-white);
-        margin: 10px;
+.ourskills .Application .prog-holder h3{
+      display: flex;
+      justify-content: space-between;
+      color: var(--main-background-white);
+      margin: 10px;
+      /* font-family: none; */
 }
+.ourskills .Application .prog-holder h3 span{
+      color: var(--main-background-white);
+      background-color: var(--main-background-blue);
+      font-size: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 3px 5px;
+}
+.ourskills .Application .prog-holder .prog {
+  height: 30px;
+  background-color: #eee;
+  position: relative;
 
-.ourskills .Application .imag{
-    width: 90px;
-    padding: 8px;
-    box-shadow: var(--main-background-white) 0px 0px 0px 0px,
-     var(--main-background-white) 0px 0px 2px 0px;    border-radius: 5px;
-    margin-bottom: 10px;
-    animation-duration: 1s;
+  
 }
-.ourskills .Application .imag:nth-of-type(1){
-    animation-delay: 0.5s;
-}
-.ourskills .Application .imag:nth-of-type(2){
-    animation-delay: 0.75s;
-}
-.ourskills .Application .imag p{
-    position: absolute;
-    background-color: white;  
-    left: 180px;
-    font-size: 20px;
-    padding: 16px;    
-    opacity: 0;
-    transition: var(--transition);
-    box-shadow: var(--main-background-white) 0px 0px 0px 0px,
-     var(--main-background-white) 0px 0px 2px 0px;}
-.ourskills .Application .imag:hover p{
-    opacity: 1;
-    margin: -64px;
-    font-size: 15px;
-    border-radius: 5px;
-}
-
-.ourskills .Application .imag img{
-max-width: 100%;
-}
+.ourskills .Application .prog-holder .prog span {
+  background-color: var(--main-background-blue);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  
+  }
 .ourskills .Front{
-        background-color: black;
-    padding: 20px;
-    animation-delay: .5s;
-    box-shadow: 0px 0px 4px 0px black;
-    transition: var(--transition);
-    position: relative;
+      background-color: black;
+  padding: 20px;
+  animation-delay: .5s;
+  box-shadow: 0px 0px 4px 0px black;
+  transition: var(--transition);
 }
 .ourskills .Front:hover{
-    transform: translateY(-15px);
+  transform: translateY(-15px);
 }
-.ourskills .Front  h3{
-        display: flex;
-        justify-content: space-between;
-        color: var(--main-background-white);
-        margin: 10px;
+.ourskills .Front .prog-holder h3{
+      display: flex;
+      justify-content: space-between;
+      color: var(--main-background-white);
+      margin: 10px;
+      /* font-family: none; */
 }
-.ourskills .Front .icon i{
-    background-color: #080808;
-    box-shadow: var(--main-background-white) 0px 0px 0px 0px,
-    var(--main-background-white) 0px 0px 2px 0px;  
-    color: white;
-    transition: var(--transition);
-    font-size: 50px;
-    padding: 5px;
-    border-radius: 5px;
-    margin-bottom: 10px;
-    animation-duration: 1s;
+.ourskills .Front .prog-holder h3 span{
+      color: var(--main-background-white);
+      background-color: var(--main-background-blue);
+      font-size: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      padding: 3px 5px;
 }
+.ourskills .Front .prog-holder .prog {
+  height: 30px;
+  background-color: #eee;
+  position: relative;
 
-.ourskills .Front .icon:nth-of-type(1){
-    animation-delay: 0.5s;
+  
 }
-.ourskills .Front .icon:nth-of-type(2){
-    animation-delay: .75s;
-}
-.ourskills .Front .icon:nth-of-type(3){
-    animation-delay: 0.95s;
-}
-.ourskills .Front .icon:nth-of-type(4){
-    animation-delay: 1.10s;
-}
-.ourskills .Front .icon p{
-    position: absolute;
-    background-color: white;
-    left: 154px;
-    font-size: 30px;
-    padding: 8px;
-    opacity: 0;
-    transition: var(--transition);
-    box-shadow: var(--main-background-white) 0px 0px 0px 0px,
-    var(--main-background-white) 0px 0px 2px 0px;
-        border-radius: 5px;
-}
-.ourskills .Front .icon:hover p{   
-    margin: -69px;
-    opacity: 1;
-}
+.ourskills .Front .prog-holder .prog span {
+  background-color: var(--main-background-blue);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  
+  }
+  
 .Project{
         padding-bottom: var(--main-padding-bottom);
         background-color: var(--main-background-white);
